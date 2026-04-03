@@ -65,7 +65,7 @@ if hasattr(model, "predict_proba"):
     probs = model.predict_proba(X)[:, 1]
 
 # =========================
-# THRESHOLD OPTIMIZATION (IMPORTANT)
+# THRESHOLD OPTIMIZATION 
 # =========================
 best_threshold = 0.5
 best_f1 = 0
@@ -107,7 +107,7 @@ if probs is not None:
 fpr = fp / (fp + tn) if (fp + tn) > 0 else 0
 
 # =========================
-# BASELINE MODEL (VERY IMPORTANT FOR CV)
+# BASELINE MODEL 
 # =========================
 dummy = DummyClassifier(strategy="most_frequent")
 dummy.fit(X, y)
