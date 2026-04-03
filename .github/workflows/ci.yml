@@ -25,11 +25,11 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: Run basic test (import check)
+    - name: Run basic test 
       run: |
         python -c "import pandas, numpy, sklearn, fastapi"
 
-    - name: Run drift check (sanity)
+    - name: Run drift check 
       run: |
         python monitoring/drift.py
 
