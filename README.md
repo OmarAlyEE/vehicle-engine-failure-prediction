@@ -1,20 +1,20 @@
-#  Predictive Maintenance: Machine Failure Prediction (End-to-End MLOps System)
+# Predictive Maintenance: Machine Failure Prediction (End-to-End MLOps System)
 
 ---
 
-# 📖 Problem Statement
+# Problem Statement
 
 Industrial machines operate under continuous stress, and unexpected failures can cause significant downtime and financial loss.  
 The goal of this project is to build a machine learning system that predicts machine failure using sensor data, and deploy it as a production-ready API with monitoring and CI/CD automation.
 
 ---
 
-#  Dataset
+# Dataset
 
 This project uses the:
 
- AI4I 2020 Predictive Maintenance Dataset  
-https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset
+AI4I 2020 Predictive Maintenance Dataset  
+https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset  
 
 ---
 
@@ -63,15 +63,13 @@ https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset
 
 ---
 
-#  System Architecture
+# System Architecture
 
-Data → Preprocessing → Feature Engineering → Model Training → Evaluation
-→ Model Saving → FastAPI Deployment → Drift Monitoring → CI/CD Pipeline
-
+Data → Preprocessing → Feature Engineering → Model Training → Evaluation → Model Saving → FastAPI Deployment → Drift Monitoring → CI/CD Pipeline  
 
 ---
 
-#  Pipeline Overview
+# Pipeline Overview
 
 ---
 
@@ -104,13 +102,14 @@ A threshold-based heuristic model using engineered features.
 - Precision: 0.0579  
 - Recall: 0.5735  
 
- Demonstrates limitations of non-ML approaches  
+Demonstrates limitations of non-ML approaches  
 
 ---
 
 ## 4. Machine Learning Models
 
 ### Random Forest (Best Model)
+
 - Accuracy: 0.9885  
 - Precision: 0.8814  
 - Recall: 0.7647  
@@ -120,6 +119,7 @@ A threshold-based heuristic model using engineered features.
 ---
 
 ### XGBoost
+
 - Accuracy: 0.9885  
 - Precision: 0.8814  
 - Recall: 0.7647  
@@ -128,13 +128,14 @@ A threshold-based heuristic model using engineered features.
 ---
 
 ### Isolation Forest (Anomaly Detection)
+
 - Precision: 0.3469  
 - Recall: 0.2500  
 - F1-score: 0.2906  
 
 ---
 
-#  Final Model Selection
+# Final Model Selection
 
 Random Forest was selected due to:
 
@@ -145,14 +146,13 @@ Random Forest was selected due to:
 
 ---
 
-#  Model Artifacts
+# Model Artifacts
 
-models/best_model.pkl
-
+models/best_model.pkl  
 
 ---
 
-#  FastAPI Deployment
+# FastAPI Deployment
 
 A REST API was built to serve real-time predictions.
 
@@ -167,16 +167,16 @@ A REST API was built to serve real-time predictions.
 
 ## Example Input
 
-```json
 {
   "temperature": 320,
   "rpm": 3000,
   "torque": 100,
   "tool_wear": 250
 }
+
 ---
 
-## Example Output
+## Output
 
 {
   "prediction": 1,
@@ -184,20 +184,22 @@ A REST API was built to serve real-time predictions.
   "risk_level": "MEDIUM"
 }
 
+---
+
 # Monitoring (MLOps Core)
 
-Implemented a **data drift detection system**:
+Implemented a data drift detection system:
 
 - Compares training vs new data distributions  
 - Uses statistical shift scoring  
 - Automatically logs drift reports  
 
 ### Output File
-- `monitoring/drift_report.json`
+- monitoring/drift_report.json  
 
 ---
 
-#  CI/CD Pipeline (GitHub Actions)
+# CI/CD Pipeline (GitHub Actions)
 
 Automated pipeline includes:
 
@@ -208,12 +210,12 @@ Automated pipeline includes:
 - Docker build validation  
 
 ### Triggered on:
-- Push to `main`
+- Push to main  
 - Pull requests  
 
 ---
 
-#  Docker Support
+# Docker Support
 
 - FastAPI service runs inside Docker  
 - Ensures environment consistency  
@@ -232,7 +234,7 @@ Automated pipeline includes:
 
 ---
 
-#  Key Insights
+# Key Insights
 
 - Leakage features significantly inflated naive models  
 - Tree-based models performed best  
@@ -253,7 +255,6 @@ Automated pipeline includes:
 - GitHub Actions  
 - Matplotlib / Seaborn  
 
-
 ---
 
 # Limitations
@@ -271,8 +272,3 @@ Best suited for ML/MLOps pipeline validation rather than fully realistic product
 - Hyperparameter tuning (Optuna / GridSearch)  
 - SMOTE for class imbalance  
 - Real-time streaming inference  
-- MLflow experiment tracking  
-- Cloud deployment (AWS / Azure / GCP)  
-- Grafana monitoring dashboard  
-
-
