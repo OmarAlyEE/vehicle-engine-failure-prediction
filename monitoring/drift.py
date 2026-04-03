@@ -7,9 +7,7 @@ import os
 
 class DriftDetector:
     def __init__(self, reference_path: str):
-        """
-        reference_path: path to training (reference) dataset
-        """
+
         if not os.path.exists(reference_path):
             raise FileNotFoundError(f"Reference file not found: {reference_path}")
 
@@ -86,13 +84,12 @@ if __name__ == "__main__":
     # Paths
     reference_path = os.path.join(BASE_DIR, "data", "processed", "features.csv")
 
-    # 🔥 IMPORTANT: use different file for drift testing
+
     new_data_path = os.path.join(BASE_DIR, "data", "processed", "new_data.csv")
 
     # Output path
     output_path = os.path.join(BASE_DIR, "monitoring", "drift_report.json")
 
-    # Ensure monitoring folder exists
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     # Initialize detector
