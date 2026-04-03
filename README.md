@@ -163,3 +163,5 @@ The AI4I 2020 dataset is a well-structured benchmark dataset designed for predic
 It exhibits relatively clear class separability, which results in high model performance metrics (ROC-AUC ~0.99).
 
 This makes it suitable for validating ML pipelines, feature engineering, and MLOps workflows, but not fully representative of noisy industrial environments where sensor drift, missing data, and delayed labeling are common.
+
+Built and deployed a FastAPI-based machine learning service for real-time vehicle engine failure prediction, integrating a trained Random Forest model with structured input validation and probabilistic risk scoring.
