@@ -43,9 +43,7 @@ if existing_leakage:
     print("[WARNING] Dropping leakage columns:", existing_leakage)
     df = df.drop(columns=existing_leakage)
 
-# =========================
-# 🚨 USE SAME FEATURES AS API
-# =========================
+
 required_features = [
     "Air temperature [K]",
     "Rotational speed [rpm]",
@@ -75,7 +73,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 print("[OK] Train/Test split done")
 
 # =========================
-# MODEL (Random Forest ONLY)
+# MODEL 
 # =========================
 model = RandomForestClassifier(
     n_estimators=200,
