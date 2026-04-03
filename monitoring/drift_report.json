@@ -1,0 +1,108 @@
+{
+    "timestamp": "2026-04-03 09:10:56",
+    "drift_detected": true,
+    "details": {
+        "UDI": {
+            "reference_mean": 5000.5,
+            "new_mean": 10003.0,
+            "shift_score": 1.7328,
+            "drift": true
+        },
+        "Air temperature [K]": {
+            "reference_mean": 300.00493,
+            "new_mean": 360.0,
+            "shift_score": 29.9937,
+            "drift": true
+        },
+        "Process temperature [K]": {
+            "reference_mean": 310.00555999999995,
+            "new_mean": 370.0,
+            "shift_score": 40.4348,
+            "drift": true
+        },
+        "Rotational speed [rpm]": {
+            "reference_mean": 1538.7761,
+            "new_mean": 2700.0,
+            "shift_score": 6.477,
+            "drift": true
+        },
+        "Torque [Nm]": {
+            "reference_mean": 39.986909999999995,
+            "new_mean": 90.0,
+            "shift_score": 5.0169,
+            "drift": true
+        },
+        "Tool wear [min]": {
+            "reference_mean": 107.951,
+            "new_mean": 220.0,
+            "shift_score": 1.7603,
+            "drift": true
+        },
+        "Machine failure": {
+            "reference_mean": 0.0339,
+            "new_mean": 1.0,
+            "shift_score": 5.3381,
+            "drift": true
+        },
+        "TWF": {
+            "reference_mean": 0.0046,
+            "new_mean": 0.0,
+            "shift_score": 0.068,
+            "drift": false
+        },
+        "HDF": {
+            "reference_mean": 0.0115,
+            "new_mean": 0.0,
+            "shift_score": 0.1079,
+            "drift": false
+        },
+        "PWF": {
+            "reference_mean": 0.0095,
+            "new_mean": 0.0,
+            "shift_score": 0.0979,
+            "drift": false
+        },
+        "OSF": {
+            "reference_mean": 0.0098,
+            "new_mean": 0.0,
+            "shift_score": 0.0995,
+            "drift": false
+        },
+        "RNF": {
+            "reference_mean": 0.0019,
+            "new_mean": 0.0,
+            "shift_score": 0.0436,
+            "drift": false
+        },
+        "temp_diff": {
+            "reference_mean": 10.000630000000001,
+            "new_mean": 10.0,
+            "shift_score": 0.0006,
+            "drift": false
+        },
+        "power": {
+            "reference_mean": 59967.14704000001,
+            "new_mean": 244000.0,
+            "shift_score": 18.0547,
+            "drift": true
+        },
+        "wear_rate": {
+            "reference_mean": 0.0709179243652727,
+            "new_mean": 0.09,
+            "shift_score": 0.448,
+            "drift": true
+        },
+        "energy_proxy": {
+            "reference_mean": 6471441.76652,
+            "new_mean": 7400000.0,
+            "shift_score": 0.2312,
+            "drift": true
+        },
+        "temp_ratio": {
+            "reference_mean": 1.0333519084658045,
+            "new_mean": 1.07,
+            "shift_score": 10.4942,
+            "drift": true
+        }
+    }
+}
