@@ -1,0 +1,4 @@
+Air temperature [K],Process temperature [K],Rotational speed [rpm],Torque [Nm],Tool wear [min]
+350,360,2500,80,200
+360,370,2600,90,210
+370,380,2700,100,220
