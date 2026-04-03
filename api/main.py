@@ -21,7 +21,7 @@ if not MODEL_PATH.exists():
 model = joblib.load(MODEL_PATH)
 
 # ----------------------------
-# Load scaler (optional)
+# Load scaler
 # ----------------------------
 scaler = joblib.load(SCALER_PATH) if SCALER_PATH.exists() else None
 
@@ -35,7 +35,7 @@ app = FastAPI(
 )
 
 # ----------------------------
-# Input validation (IMPORTANT)
+# Input validation 
 # ----------------------------
 class EngineData(BaseModel):
     temperature: float = Field(..., ge=250, le=400)
@@ -81,9 +81,7 @@ def predict_failure(data: EngineData):
         )
     }
 
-# ----------------------------
-# Health check
-# ----------------------------
+
 @app.get("/")
 def home():
     return {"status": "API is running"}
